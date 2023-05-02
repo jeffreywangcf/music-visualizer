@@ -1,0 +1,216 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
+    <link rel="shortcut icon" href="/static/image/favicon.ico">
+    <link rel="stylesheet" href="{% static '/css/index.css'%}">
+    <script src="{% static '/js/flexible.min.js' %}"></script>
+    <script src="{% static '/js/jquery-3.3.1.js' %}"></script>
+    <script src="{% static '/js/index.js' %}"></script>
+    <script src="{% static '/js/bootstrap.js' %}"></script>
+    <title>Music Visualizer</title>
+    <script></script>
+</head>
+
+<body>
+    <div class="main-page">
+        <div id="app">
+            <div class="parent">
+                <label draggable="true" class="btn label-btn " for="file">
+                    <canvas class="force" id="wrap" width="700px" height="600px"></canvas>
+                </label>
+                <input @change="chooseUploadFile" type="file" id="file" accept=".wav" />
+                <br>
+                <span id="dynamic-text" class="child">
+                    Drag .mp3 | .wav above to begin
+                </span>
+                <br>
+                <span id="prompt1" class="child">or play from samples:</span>
+                <br>
+                <a id="prompt2" class="mvbtn">classical</a>
+                <a id="prompt4" class="mvbtn">pop</a>
+                <a id="prompt3" class="mvbtn">theatre</a>
+            </div>
+        </div>
+    </div>
+    <footer class="navbar-fixed-bottom">
+        <div class="foot-c">
+            <span>Final Project. Designed by Group JEJ, CS 128 @ UIUC. 2021 Spring</span>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('dragover', function(e) {
+            e.preventDefault()
+        }, false)
+
+        const delay = ms => new Promise(res => setTimeout(res, ms));
+
+        async function resetTitleAfter(second) {
+            var x = await delay(1000 * second); // the function is paused here until the promise is fulfilled
+            document.getElementById('prompt1').setAttribute('style', 'display:initial');
+            document.getElementById('prompt2').setAttribute('style', 'display:initial');
+            document.getElementById('prompt3').setAttribute('style', 'display:initial');
+            document.getElementById('prompt4').setAttribute('style', 'display:initial');
+            document.getElementById('dynamic-text').textContent = "Drag .mp3 | .wav above to begin";
+        }
+
+        document.getElementById('prompt2').onclick = function() {
+            fetch("https://mv.eagersoft.io/media/classical.wav")
+                .then(res => res.blob()) // Gets the response and returns it as a blob
+                .then(blob => {
+                    let file = new File([blob], "classical.wav");
+                    document.getElementById('prompt1').setAttribute('style', 'display:none');
+                    document.getElementById('prompt2').setAttribute('style', 'display:none');
+                    document.getElementById('prompt3').setAttribute('style', 'display:none');
+                    document.getElementById('prompt4').setAttribute('style', 'display:none');
+                    document.getElementById('dynamic-text').textContent = "Playing: \"Rhapsody in Blue\" by " +
+                        "Libor Pesek and the Slovak National Philharmonic Orchestra";
+                    readMusicData(file);
+                    resetTitleAfter(50);
+                });
+        }
+
+        document.getElementById('prompt3').onclick = function() {
+            fetch("https://mv.eagersoft.io/media/theatre.wav")
+                .then(res => res.blob()) // Gets the response and returns it as a blob
+                .then(blob => {
+                    let file = new File([blob], "theatre.wav");
+                    document.getElementById('prompt1').setAttribute('style', 'display:none');
+                    document.getElementById('prompt2').setAttribute('style', 'display:none');
+                    document.getElementById('prompt3').setAttribute('style', 'display:none');
+                    document.getElementById('prompt4').setAttribute('style', 'display:none');
+                    document.getElementById('dynamic-text').textContent = "Playing: \"Mountains (Interstellar Soundtrack)\" by " +
+                        "Hans Zimmer";
+                    readMusicData(file);
+                    resetTitleAfter(57);
+                });
+        }
+
+        document.getElementById('prompt4').onclick = function() {
+            fetch("https://mv.eagersoft.io/media/pop.wav")
+                .then(res => res.blob()) // Gets the response and returns it as a blob
+                .then(blob => {
+                    let file = new File([blob], "pop.wav");
+                    document.getElementById('prompt1').setAttribute('style', 'display:none');
+                    document.getElementById('prompt2').setAttribute('style', 'display:none');
+                    document.getElementById('prompt3').setAttribute('style', 'display:none');
+                    document.getElementById('prompt4').setAttribute('style', 'display:none');
+                    document.getElementById('dynamic-text').textContent = "Playing: \"Believers\" by " +
+                        "Imagine Dragons";
+                    readMusicData(file);
+                    resetTitleAfter(43);
+                });
+        }
+
+        var dragFile = document.getElementById('app')
+        dragFile.addEventListener('drop', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            document.getElementById('dynamic-text').setAttribute('style', 'display:none');
+            document.getElementById('prompt1').setAttribute('style', 'display:none');
+            document.getElementById('prompt2').setAttribute('style', 'display:none');
+            document.getElementById('prompt3').setAttribute('style', 'display:none');
+            document.getElementById('prompt4').setAttribute('style', 'display:none');
+            var file = e.dataTransfer.files[0];
+            readMusicData(file)
+        })
+
+        try {
+            var AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
+            var audioApi = new AudioContext();
+        } catch (e) {
+            alert('Your browser does not support dragover feature. Please use Chrome or Firefox');
+        }
+
+        function readMusicData(file) {
+            //get audio api
+
+            //turn file into array buffer
+            var fr = new FileReader();
+            fr.readAsArrayBuffer(file);
+
+            //callback after files are loaded
+            fr.onload = function(e) {
+                audioApi.decodeAudioData(e.target.result, function(buffer) { //data after decoded
+                    audioDecodeBuffer = buffer;
+                    saveAndPlayMusicData();
+                }, function(e) {
+                    alert('File decode error');
+                });
+            };
+        }
+
+        function saveAndPlayMusicData() {
+
+            //create audio buffer
+            var audioRaw = audioApi.createBufferSource();
+
+            //create analyzer
+            var analyser = audioApi.createAnalyser();
+
+            //connect buffer to analyzer
+            audioRaw.connect(analyser);
+
+            //connect analyzer to player
+            analyser.connect(audioApi.destination);
+
+            //start playing
+            audioRaw.buffer = audioDecodeBuffer;
+            audioRaw.start(0);
+
+            //draw wavelength
+            draw(analyser);
+        }
+
+        function draw(analyser) {
+            var wrap = document.getElementById("wrap");
+            var cursor = wrap.getContext("2d");
+            var drawCurrent = function() {
+                var array = new Uint8Array(360);
+                analyser.getByteFrequencyData(array);
+                cursor.clearRect(0, 0, wrap.width, wrap.height); // draw lines
+                cursor.strokeStyle = "#ddd9d6";
+                for (var i = 0; i < array.length; i++) {
+                    var value = 8 + array[i] / 4;
+                    cursor.beginPath();
+                    cursor.lineWidth = 2;
+                    cursor.moveTo(300, 300);
+                    //R * cos (PI / 180 * rotation angle) ,-R * sin ( PI / 180 * rotation angle)
+                    cursor.lineTo(
+                        Math.cos((i * 1) / 180 * Math.PI) * (250 + value) + 300,
+                        (-Math.sin((i * 1) / 180 * Math.PI) * (250 + value) + 300)
+                    );
+                    cursor.stroke();
+                }
+                //draw a circle to cover unnecessary lines
+                cursor.beginPath();
+                cursor.lineWidth = 1;
+                cursor.arc(300, 300, 250, 0, 2 * Math.PI, false);
+                cursor.fillStyle = "#161412";
+                cursor.fill();
+
+                //inner wavelength
+                cursor.strokeStyle = "#ddd9d6";
+                cursor.beginPath();
+                cursor.lineWidth = 1;
+                cursor.moveTo((240 - (8 + array[0] / 4)) + 300, 300);
+                for (var i = 1; i < array.length; i++) {
+                    var power = 8 + array[i] / 4;
+                    cursor.lineTo(
+                        Math.cos((i * 1) / 180 * Math.PI) * (240 - power) + 300,
+                        (-Math.sin((i * 1) / 180 * Math.PI) * (240 - power) + 300)
+                    );
+                }
+                cursor.lineTo((240 - (8 + array[0] / 4)) + 300, 300);
+                cursor.stroke();
+                requestAnimationFrame(drawCurrent);
+            };
+            requestAnimationFrame(drawCurrent);
+        }
+    </script>
+</body>
+
+</html>
