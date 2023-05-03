@@ -1,360 +1,300 @@
-*** Starting uWSGI 2.0.19.1 (64bit) on [Wed May  5 12:27:30 2021] ***
-compiled with version: 8.3.1 20191121 (Red Hat 8.3.1-5) on 05 May 2021 12:11:21
-os: Linux-4.18.0-240.22.1.el8_3.x86_64 #1 SMP Thu Apr 8 19:01:30 UTC 2021
-nodename: musicvisualizer
+*** Starting uWSGI 2.0.21 (64bit) on [Wed May  3 14:20:33 2023] ***
+compiled with version: 11.3.1 20221121 (Red Hat 11.3.1-4) on 02 May 2023 23:13:38
+os: Linux-5.14.0-305.el9.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Apr 27 11:32:15 UTC 2023
+nodename: app
 machine: x86_64
 clock source: unix
 detected number of CPU cores: 1
-current working directory: /usr/local/final-project-team-jej/project/MusicVisualizer
+current working directory: /srv/music-visualizer/project/MusicVisualizer
 writing pidfile to uwsgi.pid
 detected binary path: /usr/local/bin/uwsgi
 !!! no internal routing support, rebuild with pcre support !!!
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-chdir() to /usr/local/final-project-team-jej/project/MusicVisualizer
-your processes number limit is 2987
+chdir() to /srv/music-visualizer/project/MusicVisualizer
+your processes number limit is 2764
 your memory page size is 4096 bytes
 detected max file descriptor number: 1024
 lock engine: pthread robust mutexes
 thunder lock: disabled (you can enable it with --thunder-lock)
-uWSGI http bound on 127.0.0.1:8080 fd 7
-uwsgi socket 0 bound to TCP address 127.0.0.1:43911 (port auto-assigned) fd 6
+uWSGI http bound on 127.0.0.1:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:46361 (port auto-assigned) fd 3
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-Python version: 3.6.8 (default, Aug 24 2020, 17:57:11)  [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
-Python main interpreter initialized at 0x17444e0
+Python version: 3.9.16 (main, Dec  8 2022, 00:00:00)  [GCC 11.3.1 20221121 (Red Hat 11.3.1-4)]
+Python main interpreter initialized at 0x7724d0
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 python threads support enabled
 your server socket listen backlog is limited to 100 connections
 your mercy for graceful operations on workers is 60 seconds
-mapped 416720 bytes (406 KB) for 8 cores
+mapped 416880 bytes (407 KB) for 8 cores
 *** Operational MODE: preforking+threaded ***
-WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x17444e0 pid: 3039 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7724d0 pid: 12927 (default app)
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 *** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 3039)
-spawned uWSGI worker 1 (pid: 3041, cores: 2)
-spawned uWSGI worker 2 (pid: 3042, cores: 2)
-spawned uWSGI worker 3 (pid: 3043, cores: 2)
-spawned uWSGI worker 4 (pid: 3044, cores: 2)
-spawned uWSGI http 1 (pid: 3045)
-*** Starting uWSGI 2.0.19.1 (64bit) on [Wed May  5 12:32:37 2021] ***
-compiled with version: 8.3.1 20191121 (Red Hat 8.3.1-5) on 05 May 2021 12:11:21
-os: Linux-4.18.0-240.22.1.el8_3.x86_64 #1 SMP Thu Apr 8 19:01:30 UTC 2021
-nodename: musicvisualizer
+spawned uWSGI master process (pid: 12927)
+spawned uWSGI worker 1 (pid: 12928, cores: 2)
+spawned uWSGI worker 2 (pid: 12929, cores: 2)
+spawned uWSGI worker 3 (pid: 12930, cores: 2)
+spawned uWSGI worker 4 (pid: 12931, cores: 2)
+spawned uWSGI http 1 (pid: 12932)
+Wed May  3 14:36:06 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:36:06 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:36:06 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:36:06 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:36:06 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:36:06 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:36:06 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:36:06 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.21 (64bit) on [Wed May  3 14:39:10 2023] ***
+compiled with version: 11.3.1 20221121 (Red Hat 11.3.1-4) on 02 May 2023 23:13:38
+os: Linux-5.14.0-305.el9.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Apr 27 11:32:15 UTC 2023
+nodename: app
 machine: x86_64
 clock source: unix
 detected number of CPU cores: 1
-current working directory: /usr/local/final-project-team-jej/project/MusicVisualizer
+current working directory: /srv/music-visualizer/project/MusicVisualizer
 writing pidfile to uwsgi.pid
 detected binary path: /usr/local/bin/uwsgi
 !!! no internal routing support, rebuild with pcre support !!!
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-chdir() to /usr/local/final-project-team-jej/project/MusicVisualizer
-your processes number limit is 2987
+chdir() to /srv/music-visualizer/project/MusicVisualizer
+your processes number limit is 2764
 your memory page size is 4096 bytes
 detected max file descriptor number: 1024
 lock engine: pthread robust mutexes
 thunder lock: disabled (you can enable it with --thunder-lock)
-uWSGI http bound on 127.0.0.1:8080 fd 7
-uwsgi socket 0 bound to TCP address 127.0.0.1:33691 (port auto-assigned) fd 6
+uWSGI http bound on 127.0.0.1:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:45015 (port auto-assigned) fd 3
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-Python version: 3.6.8 (default, Aug 24 2020, 17:57:11)  [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
-Python main interpreter initialized at 0x21da4e0
+Python version: 3.9.16 (main, Dec  8 2022, 00:00:00)  [GCC 11.3.1 20221121 (Red Hat 11.3.1-4)]
+Python main interpreter initialized at 0x11134d0
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 python threads support enabled
 your server socket listen backlog is limited to 100 connections
 your mercy for graceful operations on workers is 60 seconds
-mapped 416720 bytes (406 KB) for 8 cores
+mapped 416880 bytes (407 KB) for 8 cores
 *** Operational MODE: preforking+threaded ***
-WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x21da4e0 pid: 3112 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x11134d0 pid: 13078 (default app)
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 *** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 3112)
-spawned uWSGI worker 1 (pid: 3114, cores: 2)
-spawned uWSGI worker 2 (pid: 3115, cores: 2)
-spawned uWSGI worker 3 (pid: 3116, cores: 2)
-spawned uWSGI worker 4 (pid: 3117, cores: 2)
-spawned uWSGI http 1 (pid: 3118)
-*** Starting uWSGI 2.0.19.1 (64bit) on [Wed May  5 12:35:40 2021] ***
-compiled with version: 8.3.1 20191121 (Red Hat 8.3.1-5) on 05 May 2021 12:11:21
-os: Linux-4.18.0-240.22.1.el8_3.x86_64 #1 SMP Thu Apr 8 19:01:30 UTC 2021
-nodename: musicvisualizer
+spawned uWSGI master process (pid: 13078)
+spawned uWSGI worker 1 (pid: 13079, cores: 2)
+spawned uWSGI worker 2 (pid: 13080, cores: 2)
+spawned uWSGI worker 3 (pid: 13081, cores: 2)
+spawned uWSGI worker 4 (pid: 13082, cores: 2)
+spawned uWSGI http 1 (pid: 13083)
+[pid: 13079|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 284 bytes} [Wed May  3 14:39:43 2023] GET / => generated 9633 bytes in 25 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 13082|app: 0|req: 1/2] 127.0.0.1 () {28 vars in 284 bytes} [Wed May  3 14:42:19 2023] GET / => generated 9633 bytes in 25 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 13079|app: 0|req: 2/3] 127.0.0.1 () {38 vars in 709 bytes} [Wed May  3 14:45:01 2023] GET / => generated 9633 bytes in 3 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 1)
+Wed May  3 14:46:08 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:46:08 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:46:08 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:46:08 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:46:08 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:46:08 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:46:08 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 14:46:08 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.21 (64bit) on [Wed May  3 14:46:28 2023] ***
+compiled with version: 11.3.1 20221121 (Red Hat 11.3.1-4) on 02 May 2023 23:13:38
+os: Linux-5.14.0-305.el9.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Apr 27 11:32:15 UTC 2023
+nodename: app
 machine: x86_64
 clock source: unix
 detected number of CPU cores: 1
-current working directory: /usr/local/final-project-team-jej/project/MusicVisualizer
+current working directory: /srv/music-visualizer/project/MusicVisualizer
 writing pidfile to uwsgi.pid
 detected binary path: /usr/local/bin/uwsgi
 !!! no internal routing support, rebuild with pcre support !!!
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-chdir() to /usr/local/final-project-team-jej/project/MusicVisualizer
-your processes number limit is 2987
+chdir() to /srv/music-visualizer/project/MusicVisualizer
+your processes number limit is 2764
 your memory page size is 4096 bytes
 detected max file descriptor number: 1024
 lock engine: pthread robust mutexes
 thunder lock: disabled (you can enable it with --thunder-lock)
-uWSGI http bound on 127.0.0.1:8080 fd 7
-uwsgi socket 0 bound to TCP address 127.0.0.1:45789 (port auto-assigned) fd 6
+uWSGI http bound on 127.0.0.1:8001 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:45361 (port auto-assigned) fd 3
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-Python version: 3.6.8 (default, Aug 24 2020, 17:57:11)  [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
-Python main interpreter initialized at 0xa9f4e0
+Python version: 3.9.16 (main, Dec  8 2022, 00:00:00)  [GCC 11.3.1 20221121 (Red Hat 11.3.1-4)]
+Python main interpreter initialized at 0x16a74d0
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 python threads support enabled
 your server socket listen backlog is limited to 100 connections
 your mercy for graceful operations on workers is 60 seconds
-mapped 416720 bytes (406 KB) for 8 cores
+mapped 416880 bytes (407 KB) for 8 cores
 *** Operational MODE: preforking+threaded ***
-WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xa9f4e0 pid: 3200 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x16a74d0 pid: 13223 (default app)
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 *** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 3200)
-spawned uWSGI worker 1 (pid: 3202, cores: 2)
-spawned uWSGI worker 2 (pid: 3203, cores: 2)
-spawned uWSGI worker 3 (pid: 3204, cores: 2)
-spawned uWSGI worker 4 (pid: 3205, cores: 2)
-spawned uWSGI http 1 (pid: 3206)
-gateway "uWSGI http 1" has been buried (pid: 3206)
-...brutally killing workers...
-worker 1 buried after 1 seconds
-worker 2 buried after 1 seconds
-worker 3 buried after 1 seconds
-worker 4 buried after 1 seconds
-binary reloading uWSGI...
-chdir() to /usr/local/final-project-team-jej/project/MusicVisualizer
-closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
-found fd 6 mapped to socket 0 (127.0.0.1:45789)
-running /usr/local/bin/uwsgi
-[uWSGI] getting INI configuration from uwsgi.ini
-*** Starting uWSGI 2.0.19.1 (64bit) on [Wed May  5 12:39:28 2021] ***
-compiled with version: 8.3.1 20191121 (Red Hat 8.3.1-5) on 05 May 2021 12:11:21
-os: Linux-4.18.0-240.22.1.el8_3.x86_64 #1 SMP Thu Apr 8 19:01:30 UTC 2021
-nodename: musicvisualizer
+spawned uWSGI master process (pid: 13223)
+spawned uWSGI worker 1 (pid: 13224, cores: 2)
+spawned uWSGI worker 2 (pid: 13225, cores: 2)
+spawned uWSGI worker 3 (pid: 13226, cores: 2)
+spawned uWSGI worker 4 (pid: 13227, cores: 2)
+spawned uWSGI http 1 (pid: 13228)
+[pid: 13227|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 709 bytes} [Wed May  3 14:46:36 2023] GET / => generated 9633 bytes in 56 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 0)
+Not Found: /mv
+[pid: 13227|app: 0|req: 2/2] 127.0.0.1 () {36 vars in 682 bytes} [Wed May  3 14:47:34 2023] GET /mv => generated 2321 bytes in 7 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 1)
+Not Found: /mv/
+[pid: 13227|app: 0|req: 3/3] 127.0.0.1 () {36 vars in 684 bytes} [Wed May  3 14:47:43 2023] GET /mv/ => generated 2324 bytes in 7 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 0)
+Not Found: /mv
+[pid: 13227|app: 0|req: 4/4] 127.0.0.1 () {36 vars in 682 bytes} [Wed May  3 14:49:56 2023] GET /mv => generated 2321 bytes in 5 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 1)
+Not Found: /mv
+[pid: 13227|app: 0|req: 5/5] 127.0.0.1 () {38 vars in 713 bytes} [Wed May  3 14:51:57 2023] GET /mv => generated 2321 bytes in 4 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 0)
+Not Found: /mv
+[pid: 13227|app: 0|req: 6/6] 127.0.0.1 () {38 vars in 713 bytes} [Wed May  3 14:51:58 2023] GET /mv => generated 2321 bytes in 35 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 1)
+Not Found: /mv
+[pid: 13227|app: 0|req: 7/7] 127.0.0.1 () {38 vars in 713 bytes} [Wed May  3 14:51:59 2023] GET /mv => generated 2321 bytes in 4 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 0)
+Not Found: /mv
+[pid: 13224|app: 0|req: 1/8] 127.0.0.1 () {38 vars in 713 bytes} [Wed May  3 14:51:59 2023] GET /mv => generated 2321 bytes in 20 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 0)
+Not Found: /mv
+[pid: 13227|app: 0|req: 8/9] 127.0.0.1 () {38 vars in 713 bytes} [Wed May  3 14:52:00 2023] GET /mv => generated 2321 bytes in 4 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 1)
+Not Found: /mv
+[pid: 13224|app: 0|req: 2/10] 127.0.0.1 () {36 vars in 682 bytes} [Wed May  3 14:52:07 2023] GET /mv => generated 2321 bytes in 5 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 1)
+[pid: 13227|app: 0|req: 9/11] 127.0.0.1 () {36 vars in 678 bytes} [Wed May  3 14:52:11 2023] GET / => generated 9633 bytes in 2 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 13227|app: 0|req: 10/12] 127.0.0.1 () {36 vars in 678 bytes} [Wed May  3 14:53:33 2023] GET / => generated 9633 bytes in 2 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 13227|app: 0|req: 11/13] 127.0.0.1 () {36 vars in 716 bytes} [Wed May  3 15:16:08 2023] GET /media/classical.wav => generated 5284134 bytes in 15 msecs via sendfile() (HTTP/1.0 200) 7 headers in 258 bytes (0 switches on core 0)
+[pid: 13227|app: 0|req: 12/14] 127.0.0.1 () {38 vars in 642 bytes} [Wed May  3 15:16:08 2023] GET /media/classical.wav => generated 5284134 bytes in 8 msecs via sendfile() (HTTP/1.0 200) 7 headers in 258 bytes (2 switches on core 1)
+Wed May  3 15:41:30 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 15:41:30 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 15:41:30 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 15:41:30 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 15:41:30 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 15:41:30 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 15:41:30 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 15:41:30 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.21 (64bit) on [Wed May  3 15:42:24 2023] ***
+compiled with version: 11.3.1 20221121 (Red Hat 11.3.1-4) on 02 May 2023 23:13:38
+os: Linux-5.14.0-305.el9.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Apr 27 11:32:15 UTC 2023
+nodename: app
 machine: x86_64
 clock source: unix
 detected number of CPU cores: 1
-current working directory: /usr/local/final-project-team-jej/project/MusicVisualizer
-detected binary path: /usr/local/bin/uwsgi
-!!! no internal routing support, rebuild with pcre support !!!
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-chdir() to /usr/local/final-project-team-jej/project/MusicVisualizer
-your processes number limit is 2987
-your memory page size is 4096 bytes
-detected max file descriptor number: 1024
-lock engine: pthread robust mutexes
-thunder lock: disabled (you can enable it with --thunder-lock)
-uWSGI http bound on 127.0.0.1:8080 fd 8
-uwsgi socket 0 bound to TCP address 127.0.0.1:41113 (port auto-assigned) fd 7
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-Python version: 3.6.8 (default, Aug 24 2020, 17:57:11)  [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
-Python main interpreter initialized at 0x79b440
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-python threads support enabled
-your server socket listen backlog is limited to 100 connections
-your mercy for graceful operations on workers is 60 seconds
-mapped 416720 bytes (406 KB) for 8 cores
-*** Operational MODE: preforking+threaded ***
-WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x79b440 pid: 3200 (default app)
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-*** uWSGI is running in multiple interpreter mode ***
-gracefully (RE)spawned uWSGI master process (pid: 3200)
-spawned uWSGI worker 1 (pid: 3337, cores: 2)
-spawned uWSGI worker 2 (pid: 3338, cores: 2)
-spawned uWSGI worker 3 (pid: 3339, cores: 2)
-spawned uWSGI worker 4 (pid: 3340, cores: 2)
-spawned uWSGI http 1 (pid: 3341)
-*** Starting uWSGI 2.0.19.1 (64bit) on [Wed May  5 12:47:50 2021] ***
-compiled with version: 8.3.1 20191121 (Red Hat 8.3.1-5) on 05 May 2021 12:11:21
-os: Linux-4.18.0-240.22.1.el8_3.x86_64 #1 SMP Thu Apr 8 19:01:30 UTC 2021
-nodename: musicvisualizer
-machine: x86_64
-clock source: unix
-detected number of CPU cores: 1
-current working directory: /usr/local/final-project-team-jej/project/MusicVisualizer
+current working directory: /srv/music-visualizer/project/MusicVisualizer
 writing pidfile to uwsgi.pid
-detected binary path: /usr/local/bin/uwsgi
+detected binary path: /srv/music-visualizer/py3dj3/bin/uwsgi
 !!! no internal routing support, rebuild with pcre support !!!
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-chdir() to /usr/local/final-project-team-jej/project/MusicVisualizer
-your processes number limit is 2987
+chdir() to /srv/music-visualizer/project/MusicVisualizer
+your processes number limit is 2764
 your memory page size is 4096 bytes
 detected max file descriptor number: 1024
 lock engine: pthread robust mutexes
 thunder lock: disabled (you can enable it with --thunder-lock)
-uWSGI http bound on 127.0.0.1:8080 fd 7
-uwsgi socket 0 bound to TCP address 127.0.0.1:46875 (port auto-assigned) fd 6
+uWSGI http bound on 127.0.0.1:8001 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:37135 (port auto-assigned) fd 3
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-Python version: 3.6.8 (default, Aug 24 2020, 17:57:11)  [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
-Python main interpreter initialized at 0x1321640
+Python version: 3.9.16 (main, Dec  8 2022, 00:00:00)  [GCC 11.3.1 20221121 (Red Hat 11.3.1-4)]
+Python main interpreter initialized at 0x10f3710
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 python threads support enabled
 your server socket listen backlog is limited to 100 connections
 your mercy for graceful operations on workers is 60 seconds
-mapped 416720 bytes (406 KB) for 8 cores
+mapped 416880 bytes (407 KB) for 8 cores
 *** Operational MODE: preforking+threaded ***
-WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1321640 pid: 1637 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x10f3710 pid: 13433 (default app)
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 *** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 1637)
-spawned uWSGI worker 1 (pid: 1639, cores: 2)
-spawned uWSGI worker 2 (pid: 1640, cores: 2)
-spawned uWSGI worker 3 (pid: 1641, cores: 2)
-spawned uWSGI worker 4 (pid: 1642, cores: 2)
-spawned uWSGI http 1 (pid: 1643)
-*** Starting uWSGI 2.0.19.1 (64bit) on [Wed May  5 12:59:36 2021] ***
-compiled with version: 8.3.1 20191121 (Red Hat 8.3.1-5) on 05 May 2021 12:11:21
-os: Linux-4.18.0-240.22.1.el8_3.x86_64 #1 SMP Thu Apr 8 19:01:30 UTC 2021
-nodename: musicvisualizer
+spawned uWSGI master process (pid: 13433)
+spawned uWSGI worker 1 (pid: 13434, cores: 2)
+spawned uWSGI worker 2 (pid: 13435, cores: 2)
+spawned uWSGI worker 3 (pid: 13436, cores: 2)
+spawned uWSGI worker 4 (pid: 13437, cores: 2)
+spawned uWSGI http 1 (pid: 13438)
+[pid: 13434|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 285 bytes} [Wed May  3 15:42:48 2023] GET / => generated 9633 bytes in 37 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 13434|app: 0|req: 2/2] 127.0.0.1 () {38 vars in 709 bytes} [Wed May  3 15:43:00 2023] GET / => generated 9633 bytes in 2 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 13434|app: 0|req: 3/3] 127.0.0.1 () {36 vars in 678 bytes} [Wed May  3 18:21:28 2023] GET / => generated 9633 bytes in 2 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 13434|app: 0|req: 4/4] 127.0.0.1 () {38 vars in 709 bytes} [Wed May  3 18:21:43 2023] GET / => generated 9633 bytes in 1 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 1)
+Not Found: /mv
+[pid: 13437|app: 0|req: 1/5] 127.0.0.1 () {36 vars in 682 bytes} [Wed May  3 18:21:45 2023] GET /mv => generated 2321 bytes in 39 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 13437|app: 0|req: 2/6] 127.0.0.1 () {36 vars in 678 bytes} [Wed May  3 18:21:47 2023] GET / => generated 9633 bytes in 10 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 13434|app: 0|req: 5/7] 127.0.0.1 () {36 vars in 657 bytes} [Wed May  3 18:21:53 2023] GET / => generated 9633 bytes in 2 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 13435|app: 0|req: 1/8] 127.0.0.1 () {36 vars in 688 bytes} [Wed May  3 18:22:01 2023] GET /admin => generated 0 bytes in 17 msecs (HTTP/1.0 301) 5 headers in 175 bytes (1 switches on core 0)
+[pid: 13434|app: 0|req: 6/9] 127.0.0.1 () {36 vars in 690 bytes} [Wed May  3 18:22:08 2023] GET /admin/ => generated 0 bytes in 11 msecs (HTTP/1.0 302) 9 headers in 331 bytes (1 switches on core 1)
+[pid: 13435|app: 0|req: 2/10] 127.0.0.1 () {36 vars in 678 bytes} [Wed May  3 18:24:01 2023] GET / => generated 9633 bytes in 18 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 1)
+Wed May  3 18:24:55 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 18:24:55 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 18:24:55 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 18:24:55 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 18:24:55 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 18:24:55 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 18:24:55 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 18:24:55 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.21 (64bit) on [Wed May  3 18:25:04 2023] ***
+compiled with version: 11.3.1 20221121 (Red Hat 11.3.1-4) on 02 May 2023 23:13:38
+os: Linux-5.14.0-305.el9.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Apr 27 11:32:15 UTC 2023
+nodename: app
 machine: x86_64
 clock source: unix
 detected number of CPU cores: 1
-current working directory: /usr/local/final-project-team-jej/project/MusicVisualizer
+current working directory: /srv/music-visualizer/project/MusicVisualizer
 writing pidfile to uwsgi.pid
-detected binary path: /usr/local/bin/uwsgi
+detected binary path: /srv/music-visualizer/py3dj3/bin/uwsgi
 !!! no internal routing support, rebuild with pcre support !!!
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-chdir() to /usr/local/final-project-team-jej/project/MusicVisualizer
-your processes number limit is 2987
+chdir() to /srv/music-visualizer/project/MusicVisualizer
+your processes number limit is 2764
 your memory page size is 4096 bytes
 detected max file descriptor number: 1024
 lock engine: pthread robust mutexes
 thunder lock: disabled (you can enable it with --thunder-lock)
-uWSGI http bound on 127.0.0.1:8080 fd 7
-uwsgi socket 0 bound to TCP address 127.0.0.1:43297 (port auto-assigned) fd 6
+uWSGI http bound on 127.0.0.1:8001 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:40443 (port auto-assigned) fd 3
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-Python version: 3.6.8 (default, Aug 24 2020, 17:57:11)  [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
-Python main interpreter initialized at 0x1417640
+Python version: 3.9.16 (main, Dec  8 2022, 00:00:00)  [GCC 11.3.1 20221121 (Red Hat 11.3.1-4)]
+Python main interpreter initialized at 0x2282710
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 python threads support enabled
 your server socket listen backlog is limited to 100 connections
 your mercy for graceful operations on workers is 60 seconds
-mapped 416720 bytes (406 KB) for 8 cores
+mapped 416880 bytes (407 KB) for 8 cores
 *** Operational MODE: preforking+threaded ***
-WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1417640 pid: 1875 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x2282710 pid: 13864 (default app)
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 *** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 1875)
-spawned uWSGI worker 1 (pid: 1877, cores: 2)
-spawned uWSGI worker 2 (pid: 1878, cores: 2)
-spawned uWSGI worker 3 (pid: 1879, cores: 2)
-spawned uWSGI worker 4 (pid: 1880, cores: 2)
-spawned uWSGI http 1 (pid: 1881)
-*** Starting uWSGI 2.0.19.1 (64bit) on [Wed May  5 13:02:43 2021] ***
-compiled with version: 8.3.1 20191121 (Red Hat 8.3.1-5) on 05 May 2021 12:11:21
-os: Linux-4.18.0-240.22.1.el8_3.x86_64 #1 SMP Thu Apr 8 19:01:30 UTC 2021
-nodename: musicvisualizer
-machine: x86_64
-clock source: unix
-detected number of CPU cores: 1
-current working directory: /usr/local/final-project-team-jej/project/MusicVisualizer
-writing pidfile to uwsgi.pid
-detected binary path: /usr/local/bin/uwsgi
-!!! no internal routing support, rebuild with pcre support !!!
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-chdir() to /usr/local/final-project-team-jej/project/MusicVisualizer
-your processes number limit is 2987
-your memory page size is 4096 bytes
-detected max file descriptor number: 1024
-lock engine: pthread robust mutexes
-thunder lock: disabled (you can enable it with --thunder-lock)
-uWSGI http bound on 127.0.0.1:8080 fd 7
-uwsgi socket 0 bound to TCP address 127.0.0.1:42597 (port auto-assigned) fd 6
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-Python version: 3.6.8 (default, Aug 24 2020, 17:57:11)  [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
-Python main interpreter initialized at 0x2379770
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-python threads support enabled
-your server socket listen backlog is limited to 100 connections
-your mercy for graceful operations on workers is 60 seconds
-mapped 416720 bytes (406 KB) for 8 cores
-*** Operational MODE: preforking+threaded ***
-failed to open python file /usr/local/final-project-team-jej/project/MusicVisualizer/wsgi.py
-unable to load app 0 (mountpoint='') (callable not found or import error)
-*** no app loaded. going in full dynamic mode ***
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-*** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 1962)
-spawned uWSGI worker 1 (pid: 1963, cores: 2)
-spawned uWSGI worker 2 (pid: 1964, cores: 2)
-spawned uWSGI worker 3 (pid: 1965, cores: 2)
-spawned uWSGI worker 4 (pid: 1966, cores: 2)
-spawned uWSGI http 1 (pid: 1967)
-*** Starting uWSGI 2.0.19.1 (64bit) on [Wed May  5 13:10:22 2021] ***
-compiled with version: 8.3.1 20191121 (Red Hat 8.3.1-5) on 05 May 2021 12:11:21
-os: Linux-4.18.0-240.22.1.el8_3.x86_64 #1 SMP Thu Apr 8 19:01:30 UTC 2021
-nodename: musicvisualizer
-machine: x86_64
-clock source: unix
-detected number of CPU cores: 1
-current working directory: /usr/local/final-project-team-jej/project/MusicVisualizer
-writing pidfile to uwsgi.pid
-detected binary path: /usr/local/bin/uwsgi
-!!! no internal routing support, rebuild with pcre support !!!
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-chdir() to /usr/local/final-project-team-jej/project/MusicVisualizer
-your processes number limit is 2987
-your memory page size is 4096 bytes
-detected max file descriptor number: 1024
-lock engine: pthread robust mutexes
-thunder lock: disabled (you can enable it with --thunder-lock)
-uWSGI http bound on 127.0.0.1:8080 fd 7
-uwsgi socket 0 bound to TCP address 127.0.0.1:46731 (port auto-assigned) fd 6
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-Python version: 3.6.8 (default, Aug 24 2020, 17:57:11)  [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
-Python main interpreter initialized at 0x18ce640
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-python threads support enabled
-your server socket listen backlog is limited to 100 connections
-your mercy for graceful operations on workers is 60 seconds
-mapped 416720 bytes (406 KB) for 8 cores
-*** Operational MODE: preforking+threaded ***
-WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x18ce640 pid: 2085 (default app)
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-*** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 2085)
-spawned uWSGI worker 1 (pid: 2087, cores: 2)
-spawned uWSGI worker 2 (pid: 2088, cores: 2)
-spawned uWSGI worker 3 (pid: 2089, cores: 2)
-spawned uWSGI worker 4 (pid: 2090, cores: 2)
-spawned uWSGI http 1 (pid: 2091)
-[pid: 2087|app: 0|req: 1/1] 127.0.0.1 () {50 vars in 951 bytes} [Wed May  5 13:12:23 2021] GET / => generated 10697 bytes in 22 msecs (HTTP/1.0 200) 5 headers in 153 bytes (1 switches on core 0)
-Not Found: /404.html
-[pid: 2087|app: 0|req: 2/2] 127.0.0.1 () {46 vars in 802 bytes} [Wed May  5 13:12:23 2021] GET /404.html => generated 2110 bytes in 17 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 1)
-[pid: 2087|app: 0|req: 3/3] 127.0.0.1 () {50 vars in 951 bytes} [Wed May  5 13:12:53 2021] GET / => generated 10697 bytes in 2 msecs (HTTP/1.0 200) 5 headers in 153 bytes (1 switches on core 0)
-Not Found: /404.html
-[pid: 2088|app: 0|req: 1/4] 127.0.0.1 () {46 vars in 802 bytes} [Wed May  5 13:12:53 2021] GET /404.html => generated 2110 bytes in 22 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 0)
-[pid: 2088|app: 0|req: 2/5] 127.0.0.1 () {50 vars in 951 bytes} [Wed May  5 13:22:20 2021] GET / => generated 10697 bytes in 7 msecs (HTTP/1.0 200) 5 headers in 153 bytes (1 switches on core 1)
-Not Found: /404.html
-[pid: 2090|app: 0|req: 1/6] 127.0.0.1 () {46 vars in 802 bytes} [Wed May  5 13:22:20 2021] GET /404.html => generated 2110 bytes in 24 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 0)
-Not Found: /owa/
-[pid: 2090|app: 0|req: 2/7] 127.0.0.1 () {32 vars in 461 bytes} [Wed May  5 14:06:32 2021] GET /owa/ => generated 2098 bytes in 7 msecs (HTTP/1.0 404) 5 headers in 159 bytes (1 switches on core 1)
+spawned uWSGI master process (pid: 13864)
+spawned uWSGI worker 1 (pid: 13865, cores: 2)
+spawned uWSGI worker 2 (pid: 13866, cores: 2)
+spawned uWSGI worker 3 (pid: 13867, cores: 2)
+spawned uWSGI worker 4 (pid: 13868, cores: 2)
+spawned uWSGI http 1 (pid: 13871)
+[pid: 13866|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 708 bytes} [Wed May  3 18:25:06 2023] GET / => generated 9633 bytes in 25 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 13866|app: 0|req: 2/2] 127.0.0.1 () {38 vars in 708 bytes} [Wed May  3 18:25:08 2023] GET / => generated 9633 bytes in 2 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 13866|app: 0|req: 3/3] 127.0.0.1 () {38 vars in 709 bytes} [Wed May  3 18:26:20 2023] GET / => generated 9633 bytes in 2 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 13865|app: 0|req: 1/4] 127.0.0.1 () {38 vars in 709 bytes} [Wed May  3 18:26:21 2023] GET / => generated 9633 bytes in 31 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 13865|app: 0|req: 2/5] 127.0.0.1 () {36 vars in 678 bytes} [Wed May  3 18:26:23 2023] GET / => generated 9633 bytes in 2 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 13867|app: 0|req: 1/6] 127.0.0.1 () {36 vars in 678 bytes} [Wed May  3 18:26:25 2023] GET / => generated 9633 bytes in 24 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 13867|app: 0|req: 2/7] 127.0.0.1 () {36 vars in 678 bytes} [Wed May  3 18:26:31 2023] GET / => generated 9633 bytes in 2 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 13865|app: 0|req: 3/8] 127.0.0.1 () {36 vars in 657 bytes} [Wed May  3 18:26:36 2023] GET / => generated 9633 bytes in 2 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 13868|app: 0|req: 1/9] 127.0.0.1 () {36 vars in 657 bytes} [Wed May  3 18:27:28 2023] GET / => generated 9633 bytes in 23 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 13868|app: 0|req: 2/10] 127.0.0.1 () {36 vars in 715 bytes} [Wed May  3 18:46:21 2023] GET /media/classical.wav => generated 5284134 bytes in 8 msecs via sendfile() (HTTP/1.0 200) 7 headers in 258 bytes (0 switches on core 1)
+[pid: 13867|app: 0|req: 3/11] 127.0.0.1 () {38 vars in 641 bytes} [Wed May  3 18:46:21 2023] GET /media/classical.wav => generated 5284134 bytes in 4 msecs via sendfile() (HTTP/1.0 200) 7 headers in 258 bytes (2 switches on core 1)
+[pid: 13868|app: 0|req: 3/12] 127.0.0.1 () {36 vars in 678 bytes} [Wed May  3 18:51:48 2023] GET / => generated 9633 bytes in 2 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 13868|app: 0|req: 4/13] 127.0.0.1 () {38 vars in 709 bytes} [Wed May  3 18:51:52 2023] GET / => generated 9633 bytes in 2 msecs (HTTP/1.0 200) 5 headers in 167 bytes (1 switches on core 1)
+Wed May  3 20:20:27 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 20:20:27 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 20:20:27 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 20:20:27 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 20:20:27 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 20:20:27 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 20:20:27 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed May  3 20:20:27 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
