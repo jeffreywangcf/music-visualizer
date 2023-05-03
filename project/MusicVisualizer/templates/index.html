@@ -22,7 +22,7 @@
                 <label draggable="true" class="btn label-btn " for="file">
                     <canvas class="force" id="wrap" width="700px" height="600px"></canvas>
                 </label>
-                <input @change="chooseUploadFile" type="file" id="file" accept=".wav" />
+                <input @change="chooseUploadFile" type="file" id="file" accept=".wav,.mp3" />
                 <br>
                 <span id="dynamic-text" class="child">
                     Drag .mp3 | .wav above to begin
@@ -30,15 +30,15 @@
                 <br>
                 <span id="prompt1" class="child">or play from samples:</span>
                 <br>
-                <a id="prompt2" class="mvbtn">classical</a>
-                <a id="prompt4" class="mvbtn">pop</a>
-                <a id="prompt3" class="mvbtn">theatre</a>
+                <a id="prompt2" class="mvbtn">pop</a>
+                <a id="prompt3" class="mvbtn">country</a>
+                <a id="prompt4" class="mvbtn">electronic</a>
             </div>
         </div>
     </div>
     <footer class="navbar-fixed-bottom">
         <div class="foot-c">
-            <span>Final Project. Designed by Group JEJ, CS 128 @ UIUC. 2021 Spring</span>
+            <span>Final Project. Designed by Jeffrey Wang, CS 128 @ UIUC. 2021 Spring</span>
         </div>
     </footer>
     <script>
@@ -58,39 +58,7 @@
         }
 
         document.getElementById('prompt2').onclick = function() {
-            fetch("https://mv.eagersoft.io/media/classical.wav")
-                .then(res => res.blob()) // Gets the response and returns it as a blob
-                .then(blob => {
-                    let file = new File([blob], "classical.wav");
-                    document.getElementById('prompt1').setAttribute('style', 'display:none');
-                    document.getElementById('prompt2').setAttribute('style', 'display:none');
-                    document.getElementById('prompt3').setAttribute('style', 'display:none');
-                    document.getElementById('prompt4').setAttribute('style', 'display:none');
-                    document.getElementById('dynamic-text').textContent = "Playing: \"Rhapsody in Blue\" by " +
-                        "Libor Pesek and the Slovak National Philharmonic Orchestra";
-                    readMusicData(file);
-                    resetTitleAfter(50);
-                });
-        }
-
-        document.getElementById('prompt3').onclick = function() {
-            fetch("https://mv.eagersoft.io/media/theatre.wav")
-                .then(res => res.blob()) // Gets the response and returns it as a blob
-                .then(blob => {
-                    let file = new File([blob], "theatre.wav");
-                    document.getElementById('prompt1').setAttribute('style', 'display:none');
-                    document.getElementById('prompt2').setAttribute('style', 'display:none');
-                    document.getElementById('prompt3').setAttribute('style', 'display:none');
-                    document.getElementById('prompt4').setAttribute('style', 'display:none');
-                    document.getElementById('dynamic-text').textContent = "Playing: \"Mountains (Interstellar Soundtrack)\" by " +
-                        "Hans Zimmer";
-                    readMusicData(file);
-                    resetTitleAfter(57);
-                });
-        }
-
-        document.getElementById('prompt4').onclick = function() {
-            fetch("https://mv.eagersoft.io/media/pop.wav")
+            fetch("http://127.0.0.1:8001/media/pop.mp3")
                 .then(res => res.blob()) // Gets the response and returns it as a blob
                 .then(blob => {
                     let file = new File([blob], "pop.wav");
@@ -98,10 +66,42 @@
                     document.getElementById('prompt2').setAttribute('style', 'display:none');
                     document.getElementById('prompt3').setAttribute('style', 'display:none');
                     document.getElementById('prompt4').setAttribute('style', 'display:none');
-                    document.getElementById('dynamic-text').textContent = "Playing: \"Believers\" by " +
-                        "Imagine Dragons";
+                    document.getElementById('dynamic-text').textContent = "Playing: \"On A Journey\" by " +
+                        "A. T.M. from Uppbeat";
                     readMusicData(file);
-                    resetTitleAfter(43);
+                    resetTitleAfter(30);
+                });
+        }
+
+        document.getElementById('prompt3').onclick = function() {
+            fetch("http://127.0.0.1:8001/media/country.mp3")
+                .then(res => res.blob()) // Gets the response and returns it as a blob
+                .then(blob => {
+                    let file = new File([blob], "country.wav");
+                    document.getElementById('prompt1').setAttribute('style', 'display:none');
+                    document.getElementById('prompt2').setAttribute('style', 'display:none');
+                    document.getElementById('prompt3').setAttribute('style', 'display:none');
+                    document.getElementById('prompt4').setAttribute('style', 'display:none');
+                    document.getElementById('dynamic-text').textContent = "Playing: \"Plain Folks\" by " +
+                        "Videvo";
+                    readMusicData(file);
+                    resetTitleAfter(30);
+                });
+        }
+
+        document.getElementById('prompt4').onclick = function() {
+            fetch("http://127.0.0.1:8001/media/electronic.mp3")
+                .then(res => res.blob()) // Gets the response and returns it as a blob
+                .then(blob => {
+                    let file = new File([blob], "electronic.wav");
+                    document.getElementById('prompt1').setAttribute('style', 'display:none');
+                    document.getElementById('prompt2').setAttribute('style', 'display:none');
+                    document.getElementById('prompt3').setAttribute('style', 'display:none');
+                    document.getElementById('prompt4').setAttribute('style', 'display:none');
+                    document.getElementById('dynamic-text').textContent = "Playing: \"Electronic Future Beats\" by " +
+                        "QubeSounds from Pixabay";
+                    readMusicData(file);
+                    resetTitleAfter(30);
                 });
         }
 
