@@ -58,7 +58,7 @@
         }
 
         document.getElementById('prompt2').onclick = function() {
-            fetch("http://app.jeffreywang.net/mv/media/pop.mp3")
+            fetch("https://app.jeffreywang.net/mv/media/pop.mp3")
                 .then(res => res.blob()) // Gets the response and returns it as a blob
                 .then(blob => {
                     let file = new File([blob], "pop.wav");
@@ -74,7 +74,7 @@
         }
 
         document.getElementById('prompt3').onclick = function() {
-            fetch("http://app.jeffreywang.net/mv/media/country.mp3")
+            fetch("https://app.jeffreywang.net/mv/media/country.mp3")
                 .then(res => res.blob()) // Gets the response and returns it as a blob
                 .then(blob => {
                     let file = new File([blob], "country.wav");
@@ -90,7 +90,7 @@
         }
 
         document.getElementById('prompt4').onclick = function() {
-            fetch("http://app.jeffreywang.net/mv/media/electronic.mp3")
+            fetch("https://app.jeffreywang.net/mv/media/electronic.mp3")
                 .then(res => res.blob()) // Gets the response and returns it as a blob
                 .then(blob => {
                     let file = new File([blob], "electronic.wav");
